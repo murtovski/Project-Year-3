@@ -20,7 +20,7 @@
 
     <style type="text/css">
         body {
-          background-image: url("assets/image/weather-background.jpg");
+          background-image: url("/assets/image/weather-background.jpg");
           min-height: 100vh;
           background-repeat: no-repeat;
           background-size: cover;
@@ -76,6 +76,18 @@
           padding-bottom: 1rem;
         }
 
+        #rain-desc {
+            font-size: 4.5rem;
+        }
+
+        #rain-desc > span {
+            padding-left: 30px;
+        }
+
+        #rain-input {
+            padding-right: 5%;
+        }
+
     </style>
 </head>
 
@@ -98,7 +110,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="greenhouse.html">Greenhouse</a>
@@ -132,14 +144,10 @@
       <div class="row">
         <div class="col-8 weather mx-auto">
             <div class="weather-head">
-              <h1 id="location" class="text-center display-4">Miami, US</h1>
+              <h1 id="Greenhouse-1" class="text-center display-4">Greenhouse 1</h1>
               <div class="row">
-                <div id="description" class="col-6 text-center">
-                  <i id="icon-desc" class="wi wi-owm-200"></i>
-                  <p id="desc">Thunderstorm</p>
-                </div>
-                <div id="temperature" class="col-6 text-center">
-                  75<i id="icon-thermometer" class="wi wi-thermometer"></i>
+                <div id="next-rain" class="col-12 text-center">  
+                  <p id="rain-desc"><i id="icon-desc" class="wi wi-raindrop"></i><span>Next Rain Fall:</span><span id="rain-input">#</span></p>
                 </div>
               </div>
             </div>
