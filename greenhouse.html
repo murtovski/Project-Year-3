@@ -7,23 +7,25 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
   </script>
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-  
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
   <title>Weather App</title>
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <!-- Weather Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css" integrity="sha512-r/Gan7PMSRovDus++vDS2Ayutc/cSdl268u047n4z+k7GYuR7Hiw71FsT3QQxdKJBVHYttOJ6IGLnlM9IoMToQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css"
+    integrity="sha512-r/Gan7PMSRovDus++vDS2Ayutc/cSdl268u047n4z+k7GYuR7Hiw71FsT3QQxdKJBVHYttOJ6IGLnlM9IoMToQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/dcf81fa4d0.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/dcf81fa4d0.js" crossorigin="anonymous"></script>
 
- 
+
 </head>
 
 <body>
-  
-  
+
+
   <!-- Transparent overlay class hero -->
   <div class="hero">
     <!-- Nav Bar -->
@@ -46,11 +48,12 @@
               <a class="nav-link" href="greenhouse.html">Greenhouse</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Dropdown
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="esp-chart.php">Data Chart</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li>
                   <hr class="dropdown-divider">
@@ -73,40 +76,45 @@
     <div class="container">
       <div class="row">
         <div class="col-8 weather mx-auto">
-            <div class="weather-head">
-              <h1 id="Greenhouse-1" class="text-center display-4">Greenhouse 1</h1>
-              <div class="row">
-                <div id="next-rain" class="col-12 text-center">  
-                  <p id="rain-desc"><i id="icon-desc" class="wi wi-raindrop"></i><span>Next Rain Fall:</span><span id="rain-input">#</span></p>
-                </div>
+          <div class="weather-head">
+            <h1 id="Greenhouse-1" class="text-center display-4">Greenhouse 1</h1>
+            <div class="row">
+              <div id="next-rain" class="col-12 text-center">
+                <p id="rain-desc"><i id="icon-desc" class="wi wi-raindrop"></i><span>Next Rain Fall:</span><span
+                    id="rain-input">#</span></p>
               </div>
             </div>
-            <!-- Weather body section -->
-            <div class="weather-body">
-              <div class="row">
-                <div class="humidity col-4 text-center">
-                  <i class="wi wi-raindrops"></i>
-                  <span>Humidity</span>
-                </div>
-                <div class="wind col-4 text-center">
-                  <i class="wi wi-strong-wind"></i>
-                  <span>Wind Speed</span>
-                </div>
-                <div class="wind-degree col-4 text-center">
-                  <i class="wi wi-direction-up-right"></i>
-                  <span>Wind Direction</span>
-                </div>
-              </div>
-              <!-- Weather Body Data -->
-              <div class="row">
-                  <div class="data humidity-data col-4 text-center">75%</div>
-                  <div class="data wind-data col-4 text-center">3.4MPH</div>
-                  <div class="data direction-data col-4 text-center">90&deg</div>
-              </div>
+          </div>
+          <!-- Weather body section -->
+          <div class="weather-body">
+            <div class="row data-row">
+              <div class="col-6 text-center data-label">
+                <i class="wi wi-thermometer"></i><span> Temperature</span></div>
+              <div id="temperature-txt" class="data temperature-data col-6 text-center"></div>
+              <span id="temperature-txt"></span>
             </div>
+            <div class="row data-row">
+              <div class="wind-degree col-6 text-center data-label">
+                <i class="wi wi-direction-up-right"></i><span> Moisture</span></div>
+              <div id="direction-data" class="data moisture-data col-6 text-center">90&deg</div>
+            <div class="row data-row">
+              <div class="humidity col-6 text-center data-label">
+                <i class="wi wi-raindrops"></i><span> Sunlight</span></div>
+              <div id="humidity-data" class="data sunlight-data col-6 text-center">75%</div>
+            </div>
+            <div class="row data-row">
+              <div class="wind col-6 text-center data-label">
+                <i class="wi wi-strong-wind"></i><span> Pressure</span></div>
+              <div id="wind-data" class="data pressure-data col-6 text-center">3.4MPH</div>
+            </div>
+            
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
   <script src="weather.js"></script>
 </body>
