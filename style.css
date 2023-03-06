@@ -1,0 +1,149 @@
+
+.container {
+    margin: 0 auto;
+    padding-top: 5%;
+}
+
+.container-fluid{
+    color: black;
+}
+
+body {
+    background-image: url("assets/image/weather-background.jpg");
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    color: white;
+}
+
+.hero {
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(31, 34, 118, 0.5);
+}
+
+.container {
+    color: white;
+}
+
+/* weather section */
+.weather {
+    border: 1px solid white;
+    margin-top: 10rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.data-label {
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+#icon-desc {
+    width: 100px;
+    height: 100px;
+}
+
+#desc {
+    font-size: 2rem;
+}
+
+.data-row {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    font-size: 1.5rem;
+}
+
+.data {
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/* Screens up to768px */
+
+@media only screen and (max-width: 768px) {
+    .container {
+        margin: 0 auto;
+        padding-top: 13%;
+    }
+
+    .data-label {
+        font-size: 1.75rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .data {
+        font-size: 1.75rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+@media only screen and (max-width: 703px) {
+    .container {
+        margin: 0 auto;
+        padding-top: 20%;
+    }
+
+    #temperature-txt {
+        font-size: 1.25;
+    }
+
+    .data-label {
+        font-size: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .data {
+        font-size: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+@media only screen and (max-width: 414px) {
+    .container {
+        margin: 0 auto;
+        padding-top: 30%;
+    }
+    #temperature-txt {
+        font-size: 1.25;
+    }
+
+    .data-label {
+        font-size: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .data {
+        font-size: 1.25rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .container {
+        margin: 0 auto;
+        padding-top: 45%;
+    }
+
+    #temperature-txt {
+        font-size: .75;
+    }
+
+    .data-label {
+        font-size: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    .data {
+        font-size: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
