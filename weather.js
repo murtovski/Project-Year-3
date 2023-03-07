@@ -28,7 +28,7 @@ function setData(data){
   getID("humidity-data").innerHTML = `${data.current.humidity}%`
   getID("wind-data").innerHTML = `${data.current.gust_mph} mph`
   getID("direction-data").innerHTML = `${data.current.wind_degree}&deg`
-  temp = Math.round(data.current.feelslike_c);
+  temp = Math.round(data.current.temp_c);
   getID("temperature-txt").innerHTML = `${temp}&degC`
 }
 
