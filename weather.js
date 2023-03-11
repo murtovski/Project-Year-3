@@ -32,6 +32,23 @@ function setData(data){
   getID("temperature-txt").innerHTML = `${temp}&degC`
 }
 
+const now = new Date();
+
+const day = now.getDate();
+//const month = now.getMonth();
+const month = now.toLocaleString('default', { month: 'short' });
+const year = now.getFullYear();
+const hour = now.getHours();
+const min = now.getMinutes();
+const sec = 1000*100;
+const minute = sec*60;
+
+getID("date").innerHTML = `${hour} ${min} | ${month} ${day} ${year}`;
+
+setInterval(function(){
+    getID("date").innerHTML = `${hour} ${min} | ${month} ${day} ${year}`;
+}, minute);
+
 function getID(id) {
     return document.getElementById(id);
   }

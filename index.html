@@ -31,7 +31,6 @@
         <a class="navbar-brand" href="index.html">
           <i class="fa-regular fa-sun"></i> Home Grown
         </a>
-        <span id="date" class="lead">12:00 PM | Feb 15 2023</span>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -50,18 +49,16 @@
                 Dropdown
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Data Chart</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="esp-chart.php">Data Chart</a></li>
+                <li><a class="dropdown-item" href="index.html">Refresh</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
-            </li>
           </ul>
+          <span id="date" class="lead date-display"></span>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
@@ -102,14 +99,12 @@
               </div>
               <div id="wind-data" class="data wind-data col-6 text-center">3.4MPH</div>
             </div>
-            <div class="row data-row">
+            <div class="row data-row-last">
               <div class="wind-degree col-6 text-center data-label">
                 <i class="wi wi-direction-up-right"></i>
                 <span> Wind Direction</span></div>
               <div id="direction-data" class="data direction-data col-6 text-center">90&deg</div>
-
             </div>
-
           </div>
         </div>
       </div>

@@ -34,7 +34,7 @@
         <a class="navbar-brand" href="index.html">
           <i class="fa-regular fa-sun"></i> Home Grown
         </a>
-        <span id="date" class="lead">12:00 PM | Feb 15 2023</span>
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -54,17 +54,15 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="esp-chart.php">Data Chart</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="greenhouse.html">Refresh</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
-            </li>
           </ul>
+          <span id="date" class="lead date-display"></span>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
@@ -80,9 +78,9 @@
             <h1 id="Greenhouse-1" class="text-center display-4">Greenhouse 1</h1>
             <div class="row">
               <div id="next-rain" class="col-12 text-center">
-                <p id="rain-desc"><i id="icon-desc" class="wi wi-raindrop"></i><span>Next Rain Fall:</span><span
-                    id="rain-input">#</span></p>
+                <p id="rain-desc"><i class="wi wi-raindrop"></i><span>  Next Rain Fall:  </span></p>
               </div>
+              <div id="rain-display" class="text-center col-12"><span id="rain-input">#</span></div>
             </div>
           </div>
           <!-- Weather body section -->
@@ -97,18 +95,16 @@
               <div class="wind-degree col-6 text-center data-label">
                 <i class="wi wi-direction-up-right"></i><span> Moisture</span></div>
               <div id="direction-data" class="data moisture-data col-6 text-center">90&deg</div>
+            </div>
             <div class="row data-row">
               <div class="humidity col-6 text-center data-label">
                 <i class="wi wi-raindrops"></i><span> Sunlight</span></div>
               <div id="humidity-data" class="data sunlight-data col-6 text-center">75%</div>
             </div>
-            <div class="row data-row">
+            <div class="row data-row-last">
               <div class="wind col-6 text-center data-label">
                 <i class="wi wi-strong-wind"></i><span> Pressure</span></div>
               <div id="wind-data" class="data pressure-data col-6 text-center">3.4MPH</div>
-            </div>
-            
-
             </div>
           </div>
         </div>
@@ -116,7 +112,7 @@
     </div>
   </div>
   </div>
-  <script src="weather.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
