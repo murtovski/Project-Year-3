@@ -12,35 +12,50 @@ navigator.geolocation.getCurrentPosition(position => {
  .then(response => response.json())
  .then(data => {
     // Access weather data and do something with it
-    console.log(data);
-    const hourlyData = data.forecast.forecastday[0].hour; // hourly data for current day
-    const now = new Date();
-    let nextRainfallTime = null;
-    
-    for (let i = 0; i < hourlyData.length; i++) {
-        const hourData = hourlyData[i];
-        const time = new Date(hourData.time);
-  
-        if (hourData.chance_of_rain > 40 && time > now) {
-          nextRainfallTime = time;
+    // Access weather data and do something with it
+   // Access weather data and do something with it
+  console.log(data);
+  const hourlyData = data.forecast.forecastday[0].hour; // hourly data for current day
+  const nextDayData = data.forecast.forecastday[1].hour; // hourly data for tomorrow
+  const now = new Date();
+  let nextRainfallTime = null;
+
+  for (let i = 0; i < hourlyData.length; i++) {
+    const hourData = hourlyData[i];
+    const time = new Date(hourData.time);
+
+    if (hourData.chance_of_rain > 40 && time > now) {
+      nextRainfallTime = time;
+      break;
+    } else if (nextRainfallTime == null) {
+      for (let j = 0; j < nextDayData.length / 2; j++) {
+        const nextDayHourData = nextDayData[j];
+        const tom = new Date(nextDayHourData.tom);
+
+        if (nextDayHourData.chance_of_rain > 20) {
+          nextRainfallTime = tom;
           break;
         }
-    }
-
-    const options = {
-        hour: 'numeric',
-        hour12: true
-      };
-
-      const timeString = nextRainfallTime.toLocaleTimeString('en-US', options);
-
-    if (nextRainfallTime) {
-        console.log(`Next rainfall at: ${timeString}`);
-        getID("rain-input").innerHTML = timeString;
-      } else {
-        console.log("No rainfall expected in the next 24 hours.");
-        getID("rain-input").innerHTML = "No Rain Forecast";
       }
+    }
+  }
+
+  const options = {
+    hour: 'numeric',
+    hour12: true
+  };
+
+  if (nextRainfallTime != null) {
+    const timeString = nextRainfallTime.toLocaleTimeString('en-US', options);
+    console.log(nextRainfallTime);
+    console.log(`Next rainfall at: ${timeString}`);
+    getID("rain-input").innerHTML = timeString;
+  } else {
+    console.log("No Rain Forecast");
+    getID("rain-input").innerHTML = "No Rain Forecast";
+  }
+
+    
  })
  .catch(error => console.error(error));
 }, error => console.error(error));
