@@ -24,7 +24,7 @@
 </head>
 
 <body>
-
+    
 
   <!-- Transparent overlay class hero -->
   <div class="hero">
@@ -45,7 +45,7 @@
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="greenhouse.html">Greenhouse</a>
+              <a class="nav-link" href="greenhouse.php">Greenhouse</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -54,7 +54,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="esp-chart.php">Data Chart</a></li>
-                <li><a class="dropdown-item" href="greenhouse.html">Refresh</a></li>
+                <li><a class="dropdown-item" href="greenhouse.php">Refresh</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
@@ -93,18 +93,27 @@
             </div>
             <div class="row data-row">
               <div class="wind-degree col-6 text-center data-label">
-                <i class="wi wi-direction-up-right"></i><span> Moisture</span></div>
-              <div id="direction-data" class="data moisture-data col-6 text-center">90&deg</div>
+                <i class="wi wi-direction-up-right"></i><span> Humidity</span></div>
+              <div id="direction-data" class="data moisture-data col-6 text-center"></div>
             </div>
             <div class="row data-row">
               <div class="humidity col-6 text-center data-label">
-                <i class="wi wi-raindrops"></i><span> Sunlight</span></div>
-              <div id="humidity-data" class="data sunlight-data col-6 text-center">75%</div>
+                <i class="wi wi-raindrops"></i><span> Soil Moisture</span></div>
+              <div id="humidity-data" class="data sunlight-data col-6 text-center"></div>
             </div>
             <div class="row data-row-last">
-              <div class="wind col-6 text-center data-label">
-                <i class="wi wi-strong-wind"></i><span> Pressure</span></div>
-              <div id="wind-data" class="data pressure-data col-6 text-center">3.4MPH</div>
+              <div class="text-center col-6 data-label">
+                <span>Select a setting for the Fan:  </span></div>
+                  <div class="col-6 btn-group text-center">
+                    <button class="btn btn-secondary dropdown-toggle task-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span id="menu-selection">Open</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">On</a></li>
+                      <li><a class="dropdown-item" href="#">Off</a></li>
+                      <li><a class="dropdown-item" href="#">Auto</a></li>
+                    </ul>
+                  </div>
             </div>
           </div>
         </div>
@@ -112,7 +121,6 @@
     </div>
   </div>
   </div>
-  <script src="script.js"></script>
 </body>
 
 </html>

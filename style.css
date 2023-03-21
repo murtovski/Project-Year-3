@@ -39,6 +39,16 @@ body {
     border-radius: 20px;
 }
 
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 .data-label {
     font-size: 2rem;
     padding-top: 1rem;
@@ -79,6 +89,21 @@ body {
     font-size: 4rem;
     height: auto;
     margin-bottom: 10px;
+}
+
+/* Task Section */
+
+
+.task-btn{
+    background-color: rgba(0, 0, 0, 0.5);
+    Width: 100px!important;
+}
+
+.task-drop{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px!important;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 /* Screens up to768px */
